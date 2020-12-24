@@ -1,0 +1,12 @@
+12/24/20
+
+jQuery
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+Raw
+https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.js
+https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
+
+cdn
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@main/gallery.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@main/gallery.css" />

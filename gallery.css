@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------------- */
+/* Gallery Slide Show                                                  */
+/* ------------------------------------------------------------------- */
+
+div.section-background-overlay {
+    z-index: 1;
+}
+div.section-background div.mySlides div.slideCaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 5px 10px;
+    word-wrap: break-word;
+    color: white;
+    line-height: 1.4em;
+}
+div.section-background div.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.section-background div.mySlides {
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0); 
+    height: 100%;
+    width: 100%  
+}
+div.section-background div.mySlides div.slideCaption a {
+        pointer-events: none;
+        cursor: none;
+        text-decoration: none;
+}
+div.section-background div.mySlides.opaque div.slideCaption a {
+    pointer-events: auto;
+    cursor: pointer;
+    text-decoration: underline;
+}
+div.section-background div.mySlides.opaque {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+/*div.mySlides {
+  z-index: 1;
+}*/
+
+div.slideCaption {
+  z-index: 2;
+}
+
+/* ------- Read more link */
+.sqs-block-summary-v2 .summary-read-more-link {
+   display: block;
+  }
+
+/*.item-pagination-link {
+    display: none;
+}*/
+
+h2.item-pagination-title {
+  font-size: 1.2em;
+}
