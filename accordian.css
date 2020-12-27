@@ -1,0 +1,23 @@
+/* ------------------------------------------------------------------- */
+/* Accordian                                                           */
+/* ------------------------------------------------------------------- */
+
+.markdown-accordian p {
+  margin-left: 0;
+}
+.markdown-accordian .ui-closed:before {
+  font-family:monospace;
+  content:"+ ";
+}
+
+.markdown-accordian .ui-open:before {
+  font-family:monospace;
+  content:"- ";
+}
+ 
+.markdown-accordian .sqs-block-content h4 {
+    border: 1px solid black;
+    padding: 5px;
+    background: #eee;
+    border-radius: 10px;
+}
