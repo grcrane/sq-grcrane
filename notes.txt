@@ -7,6 +7,19 @@ Raw
 https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.js
 https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 
-cdn
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@main/gallery.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@main/gallery.css" />
+-- Combined 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@9f67cf2/code.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@fcf20b2/style.css" />
+
+
+-- Gallery
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@9f67cf2/gallery.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@9f67cf2/gallery.css" />
+
+-- Accordian
+
+
+-- Filter
+
+
+-- Get services 
