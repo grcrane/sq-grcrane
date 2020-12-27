@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------------- */
+/* Filter checkboxes for programs, events                              */
+/* ------------------------------------------------------------------- */
+
+// Filter flexbox
+#filterContainer .flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    flex-basis:auto;
+}
+
+#filterContainer .flexBox .filterGroup {
+    margin: 0 10px;
+    flex-basis: 200px;
+}
+#filterContainer .flexBox .filterGroup > span {
+    background: #EC2625;
+    color: white;
+    width: 100%;
+    display: block;
+    padding: 5px;
+    font-weight: bold;
+    margin-bottom: 5px;
+
+}
+
+#filterContainer .flexBox .filterGroup ul {
+   /* list-style-type: none; /* Remove bullets */
+    padding: 0; 
+    margin: 0; 
+    margin-bottom: 20px;
+    list-style: none;
+    margin-left: 0; 
+    padding-left: 1em;
+    text-indent: -2em;
+}
+
+#filterContainer .flexBox .filterGroup ul li {
+     padding-left: 1em;
+}
+#filterContainer {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+#filterContainer .flexBox .filterGroup ul li span {
+    margin-left: 10px;
+}
+
+/* ------------------------------------------------------------------- */
+/* Prevent clicking on a category, highligh active category red        */
+/* ------------------------------------------------------------------- */
+
+div.summary-content div.summary-metadata-container 
+div.summary-metadata span.summary-metadata-item--cats a {
+    pointer-events: none;
+}
+
+div.summary-content div.summary-metadata-container 
+div.summary-metadata span.summary-metadata-item--cats a.active {
+    color:red;
+}
