@@ -9,7 +9,6 @@ function filter_values () {
 
     // Process a checkbox selection 
     $('#filterContainer input[type=checkbox]').on('change', function(e) {
-        console.log('change=' + this.value);
         var name = $(this).attr('name');
         if (name) {
         $('#filterContainer input[type=checkbox][name=' + name + ']')
@@ -45,7 +44,8 @@ function filter_showvals () {
     ids = t;
 
     $('div.summary-item').each(function(index, value) {
-        xidsx = ids; // copy the array of checked items
+        //xidsx = ids; 
+        var xidsx = ids.slice(); // copy the array of checked items
         $(this).find('div.summary-content div.summary-metadata-container div.summary-metadata span.summary-metadata-item--cats a').filter(function (index2) {
             var t = this.href.indexOf('?category=');
             var i = xidsx.indexOf(this.href.substr(t+10));
