@@ -16,6 +16,11 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@9f67cf2/gallery.js"></script>
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@9f67cf2/gallery.css" />
 
+-- Filter
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@e1a4bf0/filter.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@e1a4bf0/filter.css" />
+
+
 -- Accordian
 
 
