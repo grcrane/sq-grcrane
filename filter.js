@@ -11,7 +11,6 @@ var catloc =  'div.summary-content ' +
 function filter_values () {
 
     $(catloc).css( 'pointer-events', 'none' );
-    $(catloc + '.active').css( 'color','red');
 
     // initialize based on current checkboxes
     filter_showvals();
@@ -59,7 +58,7 @@ function filter_showvals () {
             }
             var i = ids.indexOf(this.href.substr(t+10));
             if ( i >= 0) {
-                $(this).addClass('active');   
+                $(this).addClass('active').css('color','red');   
             }
         })
         // if we have found all of the selected items the show
