@@ -3,16 +3,22 @@
 /* ------------------------------------------------------------------- */
 
 // Filter flexbox
+
+#filterContainer {
+    display: flex; 
+}
+
 #filterContainer .flexBox {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 15px;
-    flex-basis:auto;
+    flex-basis: auto;
+    flex-grow: 1;
 }
 
 #filterContainer .flexBox .filterGroup {
     margin: 0 10px;
-    flex-basis: 200px;
+    flex-basis: auto;
 }
 #filterContainer .flexBox .filterGroup > span {
     background: #EC2625;
@@ -46,18 +52,4 @@
 
 #filterContainer .flexBox .filterGroup ul li span {
     margin-left: 10px;
-}
-
-/* ------------------------------------------------------------------- */
-/* Prevent clicking on a category, highligh active category red        */
-/* ------------------------------------------------------------------- */
-
-div.summary-content div.summary-metadata-container 
-div.summary-metadata span.summary-metadata-item--cats a {
-    pointer-events: none;
-}
-
-div.summary-content div.summary-metadata-container 
-div.summary-metadata span.summary-metadata-item--cats a.active {
-    color:red;
 }
