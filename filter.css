@@ -53,3 +53,11 @@
 #filterContainer .flexBox .filterGroup ul li span {
     margin-left: 10px;
 }
+
+div.summary-metadata .filterCat {
+    pointer-events: none;
+}
+
+div.summary-metadata .active.filterCat {
+    color: red;
+}

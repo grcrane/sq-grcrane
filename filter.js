@@ -10,7 +10,7 @@ var catloc =  'div.summary-content ' +
 
 function filter_values () {
 
-    $(catloc).css( 'pointer-events', 'none' );
+    $(catloc).addClass('filterCat');
 
     // initialize based on current checkboxes
     filter_showvals();
@@ -34,7 +34,7 @@ function filter_showvals () {
         if(this.value) {ids.push(this.value); }
     });
    
-    $(catloc).removeClass('active').css('color','inherit');
+    $(catloc).removeClass('active');
 
     // if we have anything checked then start with everything hidden
     if (ids.length) {
@@ -58,7 +58,7 @@ function filter_showvals () {
             }
             var i = ids.indexOf(this.href.substr(t+10));
             if ( i >= 0) {
-                $(this).addClass('active').css('color','red');   
+                $(this).addClass('active');   
             }
         })
         // if we have found all of the selected items the show
