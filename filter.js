@@ -10,8 +10,8 @@ var catloc =  'div.summary-content ' +
 
 function filter_values () {
 
-    $(catloc).css( 'pointer-events', 'none' )
-        .find('.active').css('color','red');
+    $(catloc).css( 'pointer-events', 'none' );
+    $(catloc + '.active').css( 'color','red');
 
     // initialize based on current checkboxes
     filter_showvals();
