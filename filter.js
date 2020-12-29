@@ -34,7 +34,7 @@ function filter_showvals () {
         if(this.value) {ids.push(this.value); }
     });
    
-    $(catloc).removeClass('active');
+    $(catloc).removeClass('active').css('color','inherit');
 
     // if we have anything checked then start with everything hidden
     if (ids.length) {
