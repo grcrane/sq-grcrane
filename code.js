@@ -2,9 +2,9 @@
 /* Slideshow gallery                                                   */
 /* ------------------------------------------------------------------- */
 
-
 function doGalleryShow() {
 
+    /* Don't do the fancy gallery if we are in IE 11 or earlier */
     // get some selectors and data 
     var background = $('#page article:first-child section:first-child div.section-background');
     var gallery = $('#page  article:first-child section.gallery-section').first().find('figure');
@@ -68,26 +68,30 @@ function doGalleryShow() {
     setTimeout(carousel, 8000);
   }
   
-  /* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
 /* Filter checklist values                                             */
 /* ------------------------------------------------------------------- */ 
 
+// selector for categories within each summary item
+var catloc =  'div.summary-content ' + 
+    'div.summary-metadata-container ' + 
+    'div.summary-metadata ' + 
+    'span.summary-metadata-item--cats a';
+
+
 function filter_values () {
+
+    $(catloc).addClass('filterCat');
 
     // initialize based on current checkboxes
     filter_showvals();
 
-    // Process a checkbox selection 
-    $('#filterContainer input[type=checkbox]').on('change', function(e) {
-        console.log('change=' + this.value);
-        var name = $(this).attr('name');
-        if (name) {
-        $('#filterContainer input[type=checkbox][name=' + name + ']')
-         .not(this).attr('checked',false);
-        }
+    // Process a checkbox selection change
+    $('#filterContainer input[type=checkbox], ' +
+    '#filterContainer input[type=radio]')
+    .on('change', function(e) {
         filter_showvals();
     })
-
 }
 
 function filter_showvals () {
@@ -95,12 +99,13 @@ function filter_showvals () {
     // get an array of checked items
     var ids = [];
     var xidsx = [];
-    $('#filterContainer input[type=checkbox]:checked')
-      .each(function() {
+    $('#filterContainer input[type=checkbox]:checked, ' +
+        '#filterContainer input[type=radio]:checked')
+        .each(function() {
         if(this.value) {ids.push(this.value); }
     });
-
-    $('div.summary-content div.summary-metadata-container div.summary-metadata span.summary-metadata-item--cats a').removeClass('active');
+   
+    $(catloc).removeClass('active');
 
     // if we have anything checked then start with everything hidden
     if (ids.length) {
@@ -115,8 +120,8 @@ function filter_showvals () {
     ids = t;
 
     $('div.summary-item').each(function(index, value) {
-        xidsx = ids; // copy the array of checked items
-        $(this).find('div.summary-content div.summary-metadata-container div.summary-metadata span.summary-metadata-item--cats a').filter(function (index2) {
+        var xidsx = ids.slice(); // copy the array of checked items
+        $(this).find(catloc).filter(function (index2) {
             var t = this.href.indexOf('?category=');
             var i = xidsx.indexOf(this.href.substr(t+10));
             if ( i >= 0) {
@@ -132,25 +137,25 @@ function filter_showvals () {
             $(this).css('display','block');
         }
     });
-}  
+}    
 
 /* ------------------------------------------------------------------- */
 /* Accordian                                                           */
 /* ------------------------------------------------------------------- */
 
 $( document ).ready(function() {
-	$('p span.accordian').closest('.markdown-block').addClass('markdown-accordian');
-	$('.markdown-accordian .sqs-block-content h4').addClass('ui-closed').css('cursor','pointer');
-	$('.markdown-accordian .sqs-block-content h4').css('cursor','pointer');
-	$(".markdown-accordian .sqs-block-content h4").nextUntil("h4").slideToggle();
-	$(".markdown-accordian .sqs-block-content h4").click(function() {
-		var status = $(this).hasClass("ui-open");
-		$(".markdown-accordian .sqs-block-content h4").nextUntil("h4").slideUp();
-		$(".markdown-accordian .sqs-block-content h4").removeClass('ui-open');
-		$(".markdown-accordian .sqs-block-content h4").addClass('ui-closed');
-		if (status == false) {
-		   $(this).nextUntil("h4").slideDown();
-		   $(this).toggleClass('ui-closed ui-open');
-		}
-	});
+    $('p span.accordian').closest('.markdown-block').addClass('markdown-accordian');
+    $('.markdown-accordian .sqs-block-content h4').addClass('ui-closed').css('cursor','pointer');
+    $('.markdown-accordian .sqs-block-content h4').css('cursor','pointer');
+    $(".markdown-accordian .sqs-block-content h4").nextUntil("h4").slideToggle();
+    $(".markdown-accordian .sqs-block-content h4").click(function() {
+        var status = $(this).hasClass("ui-open");
+        $(".markdown-accordian .sqs-block-content h4").nextUntil("h4").slideUp();
+        $(".markdown-accordian .sqs-block-content h4").removeClass('ui-open');
+        $(".markdown-accordian .sqs-block-content h4").addClass('ui-closed');
+        if (status == false) {
+           $(this).nextUntil("h4").slideDown();
+           $(this).toggleClass('ui-closed ui-open');
+        }
+    });
 });
