@@ -1,0 +1,19 @@
+/* ------------------------------------------------ */
+/* Donor wall                                       */
+/* ------------------------------------------------ */
+
+#donorWall div.heading {
+  white-space: pre-wrap;
+  background: #f39732;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+#donorWall div.donor {
+}
+
+#donorWall div.note {
+  font-style: italic;
+}
