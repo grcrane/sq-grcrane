@@ -20,6 +20,10 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@52ffcb2/filter.js"></script>
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@e1a4bf0/filter.css" />
 
+-- Donor Wall
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@3af1806/donor.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@3af1806/donor.css" />
+
 
 -- Accordian
 
