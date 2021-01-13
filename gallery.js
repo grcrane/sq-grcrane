@@ -41,7 +41,7 @@ function doGalleryShow() {
         var imgtemp = $(this).find('img');
         var imgcap = $(this).find('figcaption p.gallery-caption-content').text();
         var caplink = $(this).find('a').first().attr('href');
-        if (caplink) {
+        if (caplink && imgcap) {
             imgcap = '<a href="' + caplink + '">' + imgcap + '</a>';
         }
         if (imgcap) { imgcap = '<div class="slideCaption">' + imgcap + '</div>';}
