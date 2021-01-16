@@ -13,8 +13,8 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 
 
 -- Gallery
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@a5a46e8/gallery.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@dad4486/gallery.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@dad4486/gallery.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@175f9ba/gallery.css" />
 
 -- Filter
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@52ffcb2/filter.js"></script>
