@@ -12,12 +12,8 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@fcf20b2/style.css" />
 
 
--- Accordian
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@baa5135/accordian.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@baa5135/accordian.css" />
-
 -- Gallery
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@bd02c05/gallery.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@dad4486/gallery.js"></script>
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@175f9ba/gallery.css" />
 
 -- Filter
@@ -27,10 +23,6 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 -- Donor Wall
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@3af1806/donor.js"></script>
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@3af1806/donor.css" />
-
--- Flip Boxes
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8b10ab2/flipbox.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8b10ab2/flipbox.css" />
 
 -- Header Navigation
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@2e91ba2/header_nav.css" />
@@ -46,6 +38,43 @@ $( document ).ready(function() {
     doGalleryShow(); 
 })
 </script>
+
+/* ---------------------------------------------- */
+/* flip boxes                                     */
+/* ---------------------------------------------- */
+https://docs.google.com/spreadsheets/d/1u2NsV2qWwLyq8gWo7xdQ7jM8D1G3AYPVnNQPPaxw15o/edit?usp=sharing
+
+** page code
+
+<style>
+ #flexbox.v2 .backContent {
+    font-size: 15px;
+    -webkit-line-clamp: 5;
+  }
+ 
+ #flexbox.v2 div.centerBack .labelText {
+   left: unset;
+   top: unset;
+   transform: unset;
+  }
+</style>
+<script>
+$( document ).ready(function() {
+  // var file_id = '1wEfSb4Dnjz-eNEayaNiiws3ta1ZEueiQyG5-BTWSXag'; //aahom
+  var file_id = '1u2NsV2qWwLyq8gWo7xdQ7jM8D1G3AYPVnNQPPaxw15o'; // grcrane
+  build_flipcards(file_id); // build the html
+  setup_flipboxes(); // resize and setup flipboxes
+});
+</script>
+<div id=flexbox class="v2">
+  <div class="flex-container sampleClass">
+  </div>
+</div>
+
+** Sample Spreadsheet 
+
+https://docs.google.com/spreadsheets/d/1wEfSb4Dnjz-eNEayaNiiws3ta1ZEueiQyG5-BTWSXag/edit#gid=0
+
 
 --------------------- Filter
 <script>
@@ -111,3 +140,15 @@ $( document ).ready(function() {
     background: #eee;
   }
  </style>
+
+---------------------- URL to display google images 
+
+-- 01/30/21
+-- Example display image in google drive
+-- See sites/misc_testing/aahs/show_images.html
+
+-- My Drive/images/IMG_1555.JPG
+https://drive.google.com/uc?export=view&id=0BwA02ElaKUZRdDh5UkNFeDNIWHM // works car in driveway
+
+-- My Drive/images/george.jpg
+https://drive.google.com/uc?export=view&id=0BwA02ElaKUZRaENISGlGZnBWZk0 // works george.jpg
