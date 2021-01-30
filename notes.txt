@@ -12,8 +12,12 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@fcf20b2/style.css" />
 
 
+-- Accordian
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@baa5135/accordian.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@baa5135/accordian.css" />
+
 -- Gallery
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@dad4486/gallery.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@bd02c05/gallery.js"></script>
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@175f9ba/gallery.css" />
 
 -- Filter
@@ -23,6 +27,10 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 -- Donor Wall
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@3af1806/donor.js"></script>
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@3af1806/donor.css" />
+
+-- Flip Boxes
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8b10ab2/flipbox.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8b10ab2/flipbox.css" />
 
 -- Header Navigation
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@2e91ba2/header_nav.css" />
