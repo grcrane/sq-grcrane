@@ -62,19 +62,19 @@ function doGalleryShow() {
 
     // start the slideshow
     
-    carousel();
+    gallerycarousel();
 }
   
-  var myIndex = 0;
-  function carousel() {
+  var myGalIndex = 0;
+  function gallerycarousel() {
     var i;
     var background = $('#page article:first-child section:first-child div.section-background');
     var x = background.find('.mySlides');
-    if (myIndex >= x.length) {
-      myIndex = 0
+    if (myGalIndex >= x.length) {
+      myGalIndex = 0
     }
     x.removeClass("opaque");
-    background.find('div.mySlides').eq(myIndex).addClass("opaque");
-    myIndex++;
-    setTimeout(carousel, 8000);
+    background.find('div.mySlides').eq(myGalIndex).addClass("opaque");
+    myGalIndex++;
+    setTimeout(gallerycarousel, 8000);
   }
