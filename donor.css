@@ -17,3 +17,22 @@
 #donorWall div.note {
   font-style: italic;
 }
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#donorWall .note,
+#donorWall .footnote,
+#donorWall sup {
+  font-style: italic;
+}
+
+#donorWall .donorCount,
+#donorWall .donor sup {
+  margin-left: 5px;
+}
+#donorWall p {
+  display: block;
+}
