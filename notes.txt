@@ -60,8 +60,7 @@ https://docs.google.com/spreadsheets/d/1u2NsV2qWwLyq8gWo7xdQ7jM8D1G3AYPVnNQPPaxw
 </style>
 <script>
 $( document ).ready(function() {
-  // var file_id = '1wEfSb4Dnjz-eNEayaNiiws3ta1ZEueiQyG5-BTWSXag'; //aahom
-  var file_id = '1u2NsV2qWwLyq8gWo7xdQ7jM8D1G3AYPVnNQPPaxw15o'; // grcrane
+  var file_id = '1wEfSb4Dnjz-eNEayaNiiws3ta1ZEueiQyG5-BTWSXag';
   build_flipcards(file_id); // build the html
   setup_flipboxes(); // resize and setup flipboxes
 });
