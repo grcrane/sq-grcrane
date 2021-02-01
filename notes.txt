@@ -24,6 +24,10 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@43f2eb1/donor.js"></script>
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@43f2eb1/donor.css" />
 
+-- Flip Boxes
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@c87a685/flipbox.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8b10ab2/flipbox.css" />
+
 -- Header Navigation
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@2e91ba2/header_nav.css" />
 
