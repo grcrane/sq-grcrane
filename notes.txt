@@ -31,6 +31,10 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 -- Header Navigation
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@2e91ba2/header_nav.css" />
 
+-- Team Boxes
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8cdadb8/teamboxes.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8cdadb8/teamboxes.css" />
+
 -- Highlight source code
 
 
@@ -155,3 +159,20 @@ https://drive.google.com/uc?export=view&id=0BwA02ElaKUZRdDh5UkNFeDNIWHM // works
 
 -- My Drive/images/george.jpg
 https://drive.google.com/uc?export=view&id=0BwA02ElaKUZRaENISGlGZnBWZk0 // works george.jpg
+
+---------------------- Team Boxes
+
+<script>
+$( document ).ready(function() {
+    // initialize based on current checkboxes
+    var file_id = '1hiPd3cJMf_JOr3Z4RnR3XA6-Z927OSJhxJJgYXix448'; // grcrane319 Team Members
+    do_team_members(file_id);
+});
+</script>
+
+<div id="outdata">
+<div class="team_container">
+  </div>
+<p><a href="https://docs.google.com/spreadsheets/d/1hiPd3cJMf_JOr3Z4RnR3XA6-Z927OSJhxJJgYXix448/edit#gid=0" target="_blank">Spreadsheet Link</a></p> 
+
+</div>
