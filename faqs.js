@@ -34,7 +34,6 @@ function do_faqs(file_id, tabs) {
     escape("SELECT A, B, C, D WHERE B = 'No'");
     var spreadSheetLink = 'https://docs.google.com/spreadsheets/d/' + file_id + '/edit';
     var faqlist = get_spreadsheet(url);
-    console.log(faqlist);
     // Test for some error conditions 
     if(faqlist.length == 0) {
         $('.faq_container').append('<br>Ooops.. unable to read spreadsheet</br>');
