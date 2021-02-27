@@ -69,9 +69,9 @@ function do_faqs(file_id, tabs) {
 
     });
     // use tabs if we have more than one 
-    if (tabs.length > 1) {
+    //if (tabs.length > 1) {
       out = '<div id="tabs"><ul>' + tabLinks + '</ul>' + out + '</div></div>\n';
-    }
+    //}
 
     $(out).appendTo('.faq_container');
 }
