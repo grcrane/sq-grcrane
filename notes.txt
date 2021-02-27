@@ -36,8 +36,8 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8cdadb8/teamboxes.css" />
 
 -- FAQs
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8cdadb8/faqs.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8cdadb8/faqs.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8b6cf790/faqs.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@b6cf790/faqs.css" />
 
 -- Highlight source code
 
