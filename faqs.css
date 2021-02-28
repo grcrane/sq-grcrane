@@ -16,4 +16,8 @@
     .faq_container .ui-tabs .ui-tabs-nav {
         padding: 0;
     }
+
+    .faq_container .sectionBreak {
+      font-size: 15px;
+    }
 }
