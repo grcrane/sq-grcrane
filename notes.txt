@@ -37,7 +37,7 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 
 -- FAQs
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@62c34ef/faqs.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@b6cf790/faqs.css" />
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@4785926/faqs.css" />
 
 -- Highlight source code
 
@@ -50,22 +50,35 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@62c34ef/faqs.js"></script>
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@b6cf790/faqs.css" />
-<script>
+script>
 $( document ).ready(function() {
     // initialize based on current checkboxes
     var file_id = '1f3G-ECzjt8p-czZNPyUQGXG8NND016Nue5QypQTf6PQ'; // grcrane319 FAQs\
+    var activeli = 0;
+    if ($(window).width() < 960) {
+       activeli = 'none';
+    }
     var tabs = []; 
+    tabs.push(['Unity','Unity in Learning']);
+    tabs.push(['aahom','Ann Arbor Hands-On']);
+    tabs.push(['Leslie','Leslie Center']);
+    tabs.push(['Experience','Experience Center']);
     tabs.push(['Challenger','Challenger Cetner']);
-    do_faqs(file_id, tabs); 
+
+    do_faqs(file_id, tabs);
+    
     $( ".accordian" )
     .accordion({
-      collapsible: true, xactive : 'none',
+      collapsible: true, active : activeli,
       heightStyle: "content"
     });
     $( "#tabs" ).tabs();
+
 });
 </script>
-<div class="faq_container"></div>
+<div id="outdatas">
+  <div class="faq_container"></div>
+</div>
 
 Spreadsheet in grcrane319.gmail.com
 https://docs.google.com/spreadsheets/d/1f3G-ECzjt8p-czZNPyUQGXG8NND016Nue5QypQTf6PQ/edit#gid=0
