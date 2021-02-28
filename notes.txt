@@ -48,8 +48,8 @@ https://raw.githubusercontent.com/grcrane/sq-grcrane/main/gallery.css
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@62c34ef/faqs.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@b6cf790/faqs.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@225a0ed/faqs.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@4785926/faqs.css" />
 script>
 $( document ).ready(function() {
     // initialize based on current checkboxes
