@@ -22,16 +22,17 @@ function get_spreadsheet(theurl) {
 function do_faqs(file_id, tabs) {
 
     var listCol = 0;
-    var hideCol = 1;
-    var questionCol = 2;
-    var answerCol = 3;
+    var catCol = 1;
+    var hideCol = 2;
+    var questionCol = 3;
+    var answerCol = 4;
     //var theList = lists.split(','); 
 
     // Get the spreadsheet data
     var sheet = 'FAQS';
     var url = 'https://docs.google.com/spreadsheets/u/0/d/'
     + file_id + '/gviz/tq?sheet=' + sheet + '&tqx=out:json&headers=1&tq=' + 
-    escape("SELECT A, B, C, D WHERE B = 'No'");
+    escape("SELECT A, B, C, D, E WHERE C != 'Yes'");
     var spreadSheetLink = 'https://docs.google.com/spreadsheets/d/' + file_id + '/edit';
     var faqlist = get_spreadsheet(url);
     // Test for some error conditions 
