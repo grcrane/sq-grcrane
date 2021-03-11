@@ -1,11 +1,18 @@
+/* ------------------------------------------------ */
+/* FAQ's                                            */
+/* ------------------------------------------------ */
+
 #outdata {
   width: 100%;
   margin: 0 auto;
 }
+
 .faq_container {
   position: relative;
 }
+
 @media screen and (max-width:  991px ) {
+
     .faq_container .ui-tabs .ui-tabs-nav li,
     .faq_container .ui-tabs .ui-tabs-nav li a {
         width: 100%;
