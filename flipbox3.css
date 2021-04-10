@@ -1,0 +1,212 @@
+/* ----------------------------------------------------------- */
+/* Flipbox3                                                    */
+/*    04/10/2021 - initial                                     */
+/* ----------------------------------------------------------- */
+
+#flexbox.v3 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#flexbox.v3 div.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+#flexbox.v3 div.flex-container div.newcolumn:only-child {
+	margin: 0 auto;
+}
+
+/* percentage */
+#flexbox.v3 div.flex-container div.newcolumn {
+    width: 30%;
+    height: unset;
+  	/*padding-top clamp is (min, preferred, max) */
+  	padding-top: clamp(100px,30%,300px);
+  	max-width: 300px;
+    position: relative;
+}
+
+#flexbox.v3 div.flex-container div.newcolumn .flip-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/* end percent */
+
+#flexbox.v3 div.flex-container .flip-card {
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+#flexbox.v3 div.flex-container .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#flexbox.v3 .flip-card-front, 
+#flexbox.v3 .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 0;
+}
+
+#flexbox.v3 .flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+#flexbox.v3 div.front.face img {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+}
+
+#flexbox.v3 div.front.face img {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#flexbox.v3 div.front.face img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+    top: 0;
+    left: 0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+#flexbox.v3 div.flip-card-front img.active {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+}
+
+#flexbox.v3 .flip-card-front, 
+#flexbox.v3 .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 0;
+}
+
+#flexbox.v3 .flip-card-back a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    color: inherit;
+}
+
+#flexbox.v3 .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+#flexbox.v3 .centerBack {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#flexbox.v3 .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+#flexbox.v3 .flip-card-back {
+    background-color: rgb(102, 102, 102);
+    color: white;
+}
+
+#flexbox.v3 .labelText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#flexbox.v3 .centerBack .labelText {
+    position: relative;
+    color: inherit;
+}
+
+#flexbox.v3 div.centerBack .labelText {
+    left: unset;
+    top: unset;
+    transform: unset;
+}
+
+#flexbox.v3 div.centerBack .labelText {
+    display: none;
+}
+
+#flexbox.v3 .backContent {
+    
+    padding: 0 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+	#flexbox.v3 div.flex-container {
+    	justify-content: space-around;
+	}
+
+	}
+
+@media (max-width: 800px) {
+	#container {
+		width: 100%;
+	}
+    .flex-container {
+        flex-direction: column;
+    }
+
+    #flexbox.v3 div.flex-container div.newcolumn { 
+        width: 100%;
+    }  
+    
+}
