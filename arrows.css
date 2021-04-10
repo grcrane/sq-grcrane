@@ -1,0 +1,52 @@
+/* ------------------------------------------------ */
+/* Arrows for summary carousel                      */
+/* Change previous/next icons                       */
+/* Center carousel heading                          */
+/* ------------------------------------------------ */
+  
+div.sqs-gallery-design-carousel .sqs-gallery-controls 
+.previous::before {
+  content: "\E002";
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+div.sqs-gallery-design-carousel .sqs-gallery-controls 
+.next::before {
+  content: "\E005";
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+div.sqs-block-summary-v2 .summary-block-setting-design-carousel 
+.summary-carousel-pager {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+div.sqs-gallery-design-carousel .sqs-gallery-controls .next, 
+div.sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+    float: unset;
+  display: inline-block;
+}
+  
+div.sqs-block-summary-v2 .summary-block-setting-design-carousel 
+.summary-heading {
+    display: block;
+    float: unset;
+    width: 100%;
+    text-align: center;
+}
+
+div.sqs-gallery-design-carousel span.summary-header-text {
+    display: none;
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+}
