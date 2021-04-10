@@ -20,7 +20,7 @@ function flip_carousel3() {
   x.removeClass("active");
   background.find('img').eq(myIndex).addClass("active");
   myIndex++;
-  setTimeout(flip_carousel, 5000);
+  setTimeout(flip_carousel3, 5000);
 }
 
 function process_card_info3(link,images, caption, label, message) {
