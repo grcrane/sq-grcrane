@@ -27,7 +27,7 @@
     width: 30%;
     height: unset;
   	/*padding-top clamp is (min, preferred, max) */
-  	padding-top: clamp(100px,30%,300px);
+  	padding-top: clamp(200px,30%,300px);
   	max-width: 300px;
     position: relative;
 }
