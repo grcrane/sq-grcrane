@@ -219,3 +219,25 @@ $( document ).ready(function() {
 <p><a href="https://docs.google.com/spreadsheets/d/1hiPd3cJMf_JOr3Z4RnR3XA6-Z927OSJhxJJgYXix448/edit#gid=0" target="_blank">Spreadsheet Link</a></p> 
 
 </div>
+
+---------------------- Flipbox3
+
+$( document ).ready(function() {
+  var file_id = '1wEfSb4Dnjz-eNEayaNiiws3ta1ZEueiQyG5-BTWSXag';
+  build_flipcards3(file_id, 'Cards'); // build the html
+  $('div.front.face img:first-child')
+    .addClass("active");
+    $('')
+  setTimeout(flip_carousel3, 5000);
+
+  flipCardResize();
+    
+  $( window ).resize(function() {
+    flipCardResize();
+  }); 
+});
+</script>
+<div id=flexbox class="v3">
+  <div class="flex-container sampleClass"></div>
+</div>
+
