@@ -4,7 +4,7 @@
 /* ----------------------------------------------------------- */
 
 #flexbox.v3 {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -198,9 +198,6 @@
 	}
 
 @media (max-width: 800px) {
-	#container {
-		width: 100%;
-	}
     .flex-container {
         flex-direction: column;
     }
