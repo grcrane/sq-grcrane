@@ -220,24 +220,59 @@ $( document ).ready(function() {
 
 </div>
 
+---------------------- Common scripts and styles ------------
+/* common to all */
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@a0d49e4/common.min.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@31900ba/common.js"></script>
+
 ---------------------- Flipbox3
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@e1c301e/flipbox3.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@ab56830/flipbox3.css" />
+<script>
 $( document ).ready(function() {
   var file_id = '1wEfSb4Dnjz-eNEayaNiiws3ta1ZEueiQyG5-BTWSXag';
   build_flipcards3(file_id, 'Cards'); // build the html
   $('div.front.face img:first-child')
     .addClass("active");
-    $('')
   setTimeout(flip_carousel3, 5000);
-
   flipCardResize();
-    
   $( window ).resize(function() {
     flipCardResize();
   }); 
 });
 </script>
 <div id=flexbox class="v3">
-  <div class="flex-container sampleClass"></div>
+  <div class="flex-container sampleClass">
+  </div>
 </div>
 
+---------------------- Hours/address/prices
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@13a5628/hours.min.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@ffeb1aa/hours.min.css" />
+
+<script>
+$( document ).ready(function() {
+  showAddressInfo('Leslie'); 
+});
+</script>
+<body>
+<div id="hoursContainer"> 
+</div>
+
+----------------------- FAQS2
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@2b85d7a/faqs2.min.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@f76fd5e/faqs2.min.css" />
+
+<script>
+$( document ).ready(function() { 
+  do_faqs2('',true);
+});
+</script>
+<div class="faq_container">
+</div>
