@@ -1,8 +1,9 @@
-/* ------------------------------------------------------------------- */
-/* FAQs2                                                               */
-/* ------------------------------------------------------------------- */
+/*-------------------------------------------------------------*/
+/* Frequently Asked Questions, FAQS2                           */
+/*    04/11/2021 - initial                                     */
+/*-------------------------------------------------------------*/
 
-function do_faqs(museums, file_id = null, sheet = null) {
+function do_faqs2(museums, file_id = null, sheet = null) {
 
     var listCol = 0;
     var catCol = 1;
@@ -11,7 +12,8 @@ function do_faqs(museums, file_id = null, sheet = null) {
     var answerCol = 4;
     var tabLinks = ''; 
     var out = '';
-    //var theList = lists.split(','); 
+    var activeli = 0;
+    var tabs = []; 
 
     if (!file_id) {
       file_id = '1f3G-ECzjt8p-czZNPyUQGXG8NND016Nue5QypQTf6PQ';
@@ -19,6 +21,18 @@ function do_faqs(museums, file_id = null, sheet = null) {
     if (!sheet) {
       var sheet = 'FAQS';
     }
+
+    if ($(window).width() < 960) {
+      activeli = 'none';
+    }
+    // define which museums to display
+    tabs.push(['Unity','Unity in Learning']);
+    tabs.push(['aahom','Ann Arbor Hands-On']);
+    tabs.push(['Leslie','Leslie Center']);
+    tabs.push(['Yankee','Yankee Air Museum']);
+    tabs.push(['Experience','Experience Center']);
+    tabs.push(['Challenger','Challenger Cetner']);
+
     var url = 'https://docs.google.com/spreadsheets/u/0/d/'
     + file_id + '/gviz/tq?sheet=' + sheet + '&tqx=out:json&headers=1&tq=' + 
     escape("SELECT A, B, C, D, E WHERE C != 'Yes'");
@@ -35,7 +49,6 @@ function do_faqs(museums, file_id = null, sheet = null) {
     }
 
     // Loop for each tab 
-    
     var faqs = faqlist.table.rows;
     tabs.forEach(function(item, key) {
      
@@ -57,10 +70,17 @@ function do_faqs(museums, file_id = null, sheet = null) {
       out = out + '</div>\n</div>\n';
 
     });
-    // use tabs if we have more than one 
-    //if (tabs.length > 1) {
-      out = '<div id="tabs"><ul>' + tabLinks + '</ul>' + out + '</div></div>\n';
-    //}
+    
+    out = '<div id="tabs"><ul>' + tabLinks + '</ul>' + out + '</div></div>\n';
 
     $(out).appendTo('.faq_container');
+
+    // Initialize the accordian styles
+    $( ".accordian" ).accordion({
+      collapsible: true, active : activeli,
+      heightStyle: "content"
+    });
+
+    // Display the faqs
+    $( "#tabs" ).tabs();
 }
