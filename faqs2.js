@@ -55,12 +55,12 @@ function do_faqs2(museums, collapsed = true, file_id = null, sheet = null) {
     var faqlist = get_spreadsheet(url);
     // Test for some error conditions 
     if(faqlist.length == 0) {
-        $('.faq_container').append('<br>Ooops.. unable to read spreadsheet</br>');
+        $('.faq_container').append('<br>Ooops.. unable to read spreadsheet</br>' +
+          'url=' + url);
         return;
     }
     if(theMuseums.length == 0) {
-        $('.faq_container').append('<br>Ooops.. No lists name provided</br>' +
-          'url=' + url);
+        $('.faq_container').append('<br>Ooops.. No lists name provided</br>');
         return;
     }
 
