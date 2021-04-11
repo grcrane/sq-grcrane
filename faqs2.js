@@ -59,7 +59,8 @@ function do_faqs2(museums, collapsed = true, file_id = null, sheet = null) {
         return;
     }
     if(theMuseums.length == 0) {
-        $('.faq_container').append('<br>Ooops.. No lists name provided</br>');
+        $('.faq_container').append('<br>Ooops.. No lists name provided</br>' +
+          'url=' + url);
         return;
     }
 
