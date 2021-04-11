@@ -1,0 +1,29 @@
+/*-------------------------------------------------------------*/
+/* Common css                                                  */
+/*    04/10/2021 - initial                                     */
+/*-------------------------------------------------------------*/
+
+/* For frequently asked questions */
+div.faq_container .colorAahom.ui-state-active,
+.testSectionBreak.colorAahom {
+  background: rgb(233, 34, 49);
+  color: white;
+}
+
+div.faq_container .colorLeslie.ui-state-active,
+.testSectionBreak.colorLeslie {
+  background: rgb(26, 134, 84);
+  color: white;
+}
+
+div.faq_container .colorExperience.ui-state-active,
+.testSectionBreak.colorExperience {
+  background: rgb(250,169, 24);
+  color: white;
+}
+
+div.faq_container .colorChallenger.ui-state-active,
+.testSectionBreak.colorChallenger{
+  background: rgb(42,147,221);
+  color: white;
+}
