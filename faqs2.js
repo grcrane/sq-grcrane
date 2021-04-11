@@ -53,10 +53,11 @@ function do_faqs2(museums, collapsed = true, file_id = null, sheet = null) {
     escape("SELECT A, B, C, D, E WHERE C != 'Yes'");
     var spreadSheetLink = 'https://docs.google.com/spreadsheets/d/' + file_id + '/edit';
     var faqlist = get_spreadsheet(url);
+    console.log(url);
     // Test for some error conditions 
     if(faqlist.length == 0) {
         $('.faq_container').append('<br>Ooops.. unable to read spreadsheet</br>' +
-          'url=' + url);
+          '<p>url=' + url);
         return;
     }
     if(theMuseums.length == 0) {
