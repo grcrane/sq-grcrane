@@ -1,0 +1,28 @@
+/*-------------------------------------------------------------*/
+/* Frequently Asked Questions FAQS2                            */
+/*    04/11/2021 - initial                                     */
+/*-------------------------------------------------------------*/
+
+.faqs2_container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:  991px ) {
+
+    .faqs2_container .ui-tabs .ui-tabs-nav li,
+    .faqs2_container .ui-tabs .ui-tabs-nav li a {
+        width: 100%;
+    }
+    .faqs2_container .ui-tabs .ui-tabs-panel {
+        padding: 10px 0 0 0;
+    }
+    .faqs2_container .ui-tabs .ui-tabs-nav {
+        padding: 0;
+    }
+
+    .faq2s_container .sectionBreak {
+      font-size: 15px;
+    }
+}
