@@ -222,9 +222,11 @@ $( document ).ready(function() {
 
 ---------------------- Common scripts and styles ------------
 /* common to all */
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@a0d49e4/common.min.css" />
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@a0d49e4/common.min.css" />
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@31900ba/common.js"></script>
+
+
 
 ---------------------- Flipbox3
 
@@ -276,3 +278,14 @@ $( document ).ready(function() {
 </script>
 <div class="faq_container">
 </div>
+
+---------------------- Team Boxes
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@c54bd10/teamboxes2.min.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@c54bd10/teamboxes.min.css" />
+<script>
+$( document ).ready(function() {
+    do_team_members2();
+});
+</script>
+<div class="team_container"></div>
