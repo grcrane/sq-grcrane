@@ -25,4 +25,8 @@
     .faq2s_container .sectionBreak {
       font-size: 15px;
     }
+
+    .ui-accordion .ui-accordion-content {
+      padding: 1em;
+    }
 }
