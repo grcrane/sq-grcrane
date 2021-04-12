@@ -3,8 +3,9 @@
 /*    04/11/2021 - initial                                     */
 /* ----------------------------------------------------------- */ 
 
-.team_container {
+div.team_container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   padding: 5px;
   justify-content: center;
@@ -12,13 +13,16 @@
 }
 div.team_container div.item_box {
   margin: 10px !important;
-  height: 300px;
-  width: 300px;
+  height: unset;
+  width: 30%;
+  max-width: 300px;
+  padding-top: clamp(200px,30%,300px);
   position: relative;
   background: #45A04D;
   border-radius: 10px;
   }
-.item_front, .item_back {
+div.team_container div.item_front, 
+div.team_container div.item_back {
   position: absolute;
   top: 0;
   left: 0;
@@ -27,20 +31,20 @@ div.team_container div.item_box {
   border-radius: 10px;
   overflow: hidden;
 }
-.item_back {
+div.team_container div.item_back {
   background: #45A04D;
   opacity: 0;
   transition: all .6s ease-in-out;
 }
-.item_front {
+div.team_container div.item_front {
   line-height: 30px;
 }
-.item_img {
+div.team_container img.item_img {
   object-fit: cover;
   height: inherit;
   width: inherit;
 }
-.item_bio {
+div.team_container div.item_bio {
   position: relative;
   height: unset;
   width: unset;
@@ -57,7 +61,10 @@ div.team_container div.item_box {
   overflow: hidden;
   padding-bottom: 0;
 }
-.item_name {
+div.team_container div.item_bio p {
+  margin: 0;
+}
+div.team_container div.item_name {
   color: white;
   position: absolute;
   bottom: 0;
@@ -68,11 +75,19 @@ div.team_container div.item_box {
   font-size: 25px;
   width: 100%;
 }
-.item_title {
+div.team_container div.item_title {
   display: block;
   font-size: 18px;
   font-style: italic;
 }
-.item_box:hover .item_back {
+div.team_container .item_box:hover .item_back {
   opacity: 1;
+}
+
+@media (max-width: 800px) {
+    div.team_container div.item_box {
+        width: 70%;
+        max-width: 70%;
+        padding-top: clamp(200px,70%,300px);
+    }
 }

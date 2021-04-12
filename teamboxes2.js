@@ -65,3 +65,15 @@ function do_team_members2(file_id = null, sheet = null) {
     })
     $('.team_container').append(out); 
 }
+
+function teamCardResize() {
+  var fontsize = parseInt($('.item_bio').css('font-size'));
+  var height = parseInt($('div.team_container div.item_box div.item_back').css('height'));
+  var padding = parseInt($('div.team_container div.item_box div.item_back div.item_bio').css('padding-top'));
+  height = height - (padding * 2); // allow for padding top and bottom
+  var lineheight = fontsize * 1.2;
+  var lines = parseInt(height / lineheight);
+  //alert(padding + " " + fontsize + ' ' + height + ' ' + lineheight + ' ' + lines); 
+  $('div.team_container div.item_box div.item_bio').css("-webkit-line-clamp", lines.toString());
+  $('div.team_container div.item_box').css("line-height", lineheight + 'px');
+}
