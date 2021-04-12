@@ -253,7 +253,7 @@ $( document ).ready(function() {
 ---------------------- Hours/address/prices
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@13a5628/hours.min.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@ffeb1aa/hours.min.css" />
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@a1ece69/hours.min.css" />
 
 <script>
 $( document ).ready(function() {
@@ -281,8 +281,8 @@ $( document ).ready(function() {
 
 ---------------------- Team Boxes
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@c54bd10/teamboxes2.min.js"></script>
-<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@c54bd10/teamboxes.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@059b11c/teamboxes2.min.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@059b11c/teamboxes.min.css" />
 <script>
 $( document ).ready(function() {
     do_team_members2();
