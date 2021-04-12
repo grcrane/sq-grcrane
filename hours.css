@@ -6,14 +6,14 @@
 #hoursContainer {
   border: 5px solid rgb(233, 34, 49);
   border-radius: .5em;
-  padding: 10px;
+  padding: 1%;
   display: flex;
   width: auto;
   margin: 0 auto;
   white-space: nowrap;
   margin-bottom: 17px;
   display: none;
-  width: 100%;
+  width: 98%;
   margin: 0 auto;
 }
 
