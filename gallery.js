@@ -6,8 +6,8 @@ function doGalleryShow() {
 
     // get some selectors and data 
     var background = $('#page article:first-child section:first-child div.section-background');
-    var gallery = $('#page  article:first-child section.gallery-section').first().find('figure');
-
+    var gallery = $('#page  article:first-child section.gallery-section').first().find('figure.gallery-grid-item');
+    
     // If no gallery found so abort
     if (gallery.length == 0) {
         return false;
@@ -46,7 +46,6 @@ function doGalleryShow() {
         temp = '<div class="mySlides"><img src="' + imgtemp.attr('data-src') + '"' + style + '">' +
         imgcap + '</div>';
         background.append(temp);
-        console.log('src=' + imgtemp.attr('data-src'));
     });
 
     // start the slideshow
