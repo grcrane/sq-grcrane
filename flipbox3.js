@@ -5,6 +5,16 @@
 
 var columnIndex = 1; 
 
+function flipCardResize3() {
+  var fontsize = parseInt($('#flexbox.v3 .backContent').css('font-size'));
+  var height = parseInt($('#flexbox.v3 div.newcolumn .flip-card').css('height'));
+  var lineheight = fontsize * 1.2;
+  var lines = parseInt(height / lineheight);
+  //alert(fontsize + ' ' + height + ' ' + lineheight + ' ' + lines); 
+  $('#flexbox.v3 .backContent').css("-webkit-line-clamp", lines.toString());
+  $('#flexbox.v3 .backContent').css("line-height", lineheight + 'px');
+}
+
 function flip_carousel3() {
   var i;
   var numColumns = $('.newcolumn').length;
@@ -64,63 +74,45 @@ function build_flipcards3(file_id = null, sheet = null) {
     return;
   }
   var url = 'https://docs.google.com/spreadsheets/u/0/d/'
-    + file_id + '/gviz/tq?tqx=sheet=' + sheet + 
+    + file_id + '/gviz/tq?tqx=&sheet=' + sheet + 
     '&headers=1&tq=' + escape('SELECT * ORDER BY A, B');
-  
+  //alert(url);
   var cardlist = get_spreadsheet(url);
   var cards = cardlist.table.rows;
+  console.log(cards);
 
   var prevcard = ''; 
-  var images = [];
-  var cardnumber = '';
-  var label = 'More Info';
-  var message = 'See more info';
-  var caption = 'VISIT'; 
-  var link = '#'; 
   cards.forEach(function(item, key) {
-    cardnumber = item.c[0].v;
-    itemtype = item.c[1].v;
-    itemtype = itemtype.toLowerCase();
-    if (Number.isInteger(cardnumber)) { 
-      if (prevcard != cardnumber) {
-        if (prevcard != '') {
-          process_card_info3(link,images, caption, label, message); 
-        }
-        images = [];
-        caption = 'TEST';
-        label = 'More Info';
-        link = '#';
-        message = 'See more info';
-        prevcard = cardnumber;
-      }
-      if (itemtype == 'image') {
-        images.push(item.c[2].v);
-      }
-      if (itemtype == 'caption') {
-        caption = item.c[2].v;
-      }
-      if (itemtype == 'message') {
-        message = item.c[2].v;
-      }
-      if (itemtype == 'label') {
-        label = item.c[2].v;
-      }
-      if (itemtype == 'link') {
-        link = item.c[2].v;
-      }
-    }
-  })
-  if (cardnumber != '') {
+    var images = [];
+    var cardnumber = '';
+    var label = 'More Info';
+    var message = 'See more info';
+    var caption = 'VISIT'; 
+    var link = '#'; 
+    var background = 'rgb(102,102,102)';
+    var color = 'white'; 
+  
+    if (item.c[1] != null) {cardnumber = item.c[1].v;}
+    if (item.c[2] != null) {caption = item.c[2].v;}
+    if (item.c[3] != null) {label = item.c[3].v;}
+    if (item.c[4] != null) {link = item.c[4].v;}
+    if (item.c[5] != null) {background = item.c[5].v;}
+    if (item.c[6] != null) {color = item.c[6].v;}
+    if (item.c[7] != null) {message = item.c[7].v;}
+    for (var i = 8; i < 15; i++) {
+      if (item.c[i] != null) { images.push(item.c[i].v); }
+    };
     process_card_info3(link,images, caption, label, message);
-  }
-}
+  })   
 
-function flipCardResize() {
-	var fontsize = parseInt($('#flexbox.v3 .backContent').css('font-size'));
-	var height = parseInt($('#flexbox.v3 div.newcolumn .flip-card').css('height'));
-	var lineheight = fontsize * 1.2;
-	var lines = parseInt(height / lineheight);
-	//alert(fontsize + ' ' + height + ' ' + lineheight + ' ' + lines); 
-	$('#flexbox.v3 .backContent').css("-webkit-line-clamp", lines.toString());
-	$('#flexbox.v3 .backContent').css("line-height", lineheight + 'px');
+  $('div.front.face img:first-child')
+    .addClass("active");
+    $('')
+  setTimeout(flip_carousel3, 5000);
+
+  flipCardResize3();
+
+  $( window ).resize(function() {
+    flipCardResize3();
+  });
 }
