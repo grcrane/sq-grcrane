@@ -78,8 +78,8 @@ function build_flipcards3(boxNumber = 1, file_id = null, sheet = null) {
   }
   var url = 'https://docs.google.com/spreadsheets/u/0/d/'
     + file_id + '/gviz/tq?tqx=&sheet=' + sheet + 
-    '&headers=1&tq=' + escape('SELECT * WHERE A="' + boxNumber + '" ORDER BY A, B');
-  alert(url);
+    '&headers=1&tq=' + escape('SELECT * ORDER BY A, B');
+  console.log(url);
   var cardlist = get_spreadsheet(url);
   var cards = cardlist.table.rows;
   console.log(cards);
