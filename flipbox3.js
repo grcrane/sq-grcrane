@@ -71,7 +71,10 @@ function build_flipcards3(file_id = null, sheet = null) {
 
 
   if (!file_id) {
-    return;
+    file_id = '1wEfSb4Dnjz-eNEayaNiiws3ta1ZEueiQyG5-BTWSXag';
+  }
+  if (!sheet) {
+    sheet = 'Cards2';
   }
   var url = 'https://docs.google.com/spreadsheets/u/0/d/'
     + file_id + '/gviz/tq?tqx=&sheet=' + sheet + 
