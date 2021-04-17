@@ -5,17 +5,6 @@
 
 function doGalleryShow() {
 
-    /* Don't do the fancy gallery if we are in IE 11 or earlier */
-    /*
-    var ua = window.navigator.userAgent;
-    var msie = ua.indexOf('MSIE '); // IE 10 and older
-    var trident = ua.indexOf('Trident/'); // IE 11
-    if (msie > 0 || trident > 0) {
-        var gallery = $('#page  article:first-child section.gallery-section').first().find('figure');
-        gallery.closest('section').css('display', 'none'); 
-        return;
-    }
-    */
     // get some selectors and data 
     var background = $('#page article:first-child section:first-child div.section-background');
     var gallery = $('#page  article:first-child section.gallery-section').first().find('figure');
@@ -62,11 +51,11 @@ function doGalleryShow() {
 
     // start the slideshow
     
-    gallerycarousel();
+    galleryCarousel();
 }
   
   var myGalIndex = 0;
-  function gallerycarousel() {
+  function galleryCarousel() {
     var i;
     var background = $('#page article:first-child section:first-child div.section-background');
     var x = background.find('.mySlides');
@@ -76,5 +65,5 @@ function doGalleryShow() {
     x.removeClass("opaque");
     background.find('div.mySlides').eq(myGalIndex).addClass("opaque");
     myGalIndex++;
-    setTimeout(gallerycarousel, 8000);
+    setTimeout(galleryCarousel, 8000);
   }
