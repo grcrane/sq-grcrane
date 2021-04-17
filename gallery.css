@@ -47,7 +47,7 @@ div.section-background div.mySlides.opaque div.slideCaption a {
 div.section-background div.mySlides.opaque {
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=1);
+    filter: alpha(opacity=1); 
 }
 
 div.slideCaption {
