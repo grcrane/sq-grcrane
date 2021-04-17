@@ -1,7 +1,6 @@
-/* ------------------------------------------------------------------- */
-/* Slideshow gallery                                                   */
-/* ------------------------------------------------------------------- */
-
+/* ----------------------------------------------------------- */
+/* Slideshow gallery                                           */
+/* ----------------------------------------------------------- */
 
 function doGalleryShow() {
 
@@ -47,6 +46,7 @@ function doGalleryShow() {
         temp = '<div class="mySlides"><img src="' + imgtemp.attr('data-src') + '"' + style + '">' +
         imgcap + '</div>';
         background.append(temp);
+        console.log('src=' + imgtemp.attr('data-src'));
     });
 
     // start the slideshow
