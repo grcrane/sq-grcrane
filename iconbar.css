@@ -5,7 +5,7 @@
 
 section:first-of-type div.content-wrapper div.content {
     width: auto !important;
-    min-height: 300px;
+    /*min-height: 300px;*/
 }
 
 #iconBar { 
