@@ -3,7 +3,7 @@
 /*    04/17/2021 - initial                                     */
 /*-------------------------------------------------------------*/
 
-var iconsFor ['aahom','leslie','unity','yankee']; 
+var iconsFor = ['aahom','leslie','unity','yankee']; 
 var icons = [
 'https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f4857363da23de8d99653/1616857176038/aahom.png?format=2500w',
 'https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f48565689961a0425d469/1616857174314/lsnc.png',
