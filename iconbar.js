@@ -18,6 +18,7 @@ function showIconBar(sticky = true) {
 	temp += '</ul>\n';
 	$('#iconBar').html(temp); 
 	if (sticky) {
+		$('#iconBar').addClass('sticky');
 		$('#iconBar').appendTo('#page section:first-of-type div.section-background');
         $('div.mySlides div.slideCaption').css('bottom','100px');
 	} 
