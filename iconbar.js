@@ -10,16 +10,15 @@ var icons = [
 'https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f48578926120327029e3f/1616857176069/uil.png',
 'https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f485760b0890b8760c9d1/1616857176070/yam.png'
 ]
-
 function showIconBar(sticky = true) {
-	var temp = '<div id="iconBar" style="clear:both";>' +
-	'<ul class="iconBarFlex">';
+	var temp = '<ul class="iconBarFlex">';
 	icons.forEach(function(item,key) {
 		temp += '<li class="flex-item"><img src="' + item + '"></li>\n';
 	})
-	temp += '</ul></div>\n';
-	$('#' + id).html(temp); 
+	temp += '</ul>\n';
+	$('#iconBar').html(temp); 
 	if (sticky) {
 		$('#iconBar').appendTo('#page section:first-of-type div.section-background');
-	}
+        $('div.mySlides div.slideCaption').css('bottom','100px');
+	} 
 }
