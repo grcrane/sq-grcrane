@@ -1,0 +1,59 @@
+/* ----------------------------------------------------------- */
+/* Icon Bar                                                    */
+/*    04/1/72021 - initial                                     */
+/* ----------------------------------------------------------- */
+
+section:first-of-type div.content-wrapper div.content {
+    width: auto !important;
+    min-height: 300px;
+}
+
+#iconBarContainer { 
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  clear: both;
+}
+
+#iconBarContainer .iconBarFlex {
+  /* We first create a flex layout context */
+  display: flex;
+  flex-flow: wrap;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+#iconBarContainer .iconBarFlex .flex-item {
+  padding: 5px;
+  height: auto;
+  line-height: 1em;
+  font-size: 1em;
+}
+
+#iconBarContainer .iconBarFlex .flex-item img {
+  width: 150px;
+  object-fit:cover;
+}
+
+#iconBarContainer img#banner{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  #iconBarContainer .iconBarFlex .flex-item img {
+      width: auto;
+      height: 35px;
+  }
+
+  #iconBarContainer .iconBarFlex .flex-item {
+    padding: unset;
+    height: auto;
+    line-height: unset;
+    font-size: 1em;
+  }
+}
