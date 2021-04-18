@@ -12,7 +12,7 @@ var icons = [
 ]
 
 function showIconBar(sticky = true) {
-	var temp = '<div id=' + id + ' style="clear:both";>' +
+	var temp = '<div id="iconBar" style="clear:both";>' +
 	'<ul class="iconBarFlex">';
 	icons.forEach(function(item,key) {
 		temp += '<li class="flex-item"><img src="' + item + '"></li>\n';
@@ -20,6 +20,6 @@ function showIconBar(sticky = true) {
 	temp += '</ul></div>\n';
 	$('#' + id).html(temp); 
 	if (sticky) {
-		$('#' + id).appendTo('#page section:first-of-type div.section-background');
+		$('#iconBar').appendTo('#page section:first-of-type div.section-background');
 	}
 }
