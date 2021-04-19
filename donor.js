@@ -27,7 +27,7 @@ function get_spreadsheet(theurl) {
   return result;
 }
 
-function do_donor_wall_new(file_id) {
+function do_donor_wall_new(file_id = null, sheet = null) {
 
     var colMin = 0;
     var colDonor = 1;
@@ -37,10 +37,16 @@ function do_donor_wall_new(file_id) {
     var footone = '';
     var foottwo = ''; 
     var notes = ''; 
-    var sheet = 'DonorWall';
+
+    if (!file_id) {
+      file_id = '1Euo2kWx3lMC60XIAE7oUgXjEjoXkktFU3cW3YpZKLKw';
+    }
+    if (!sheet) {
+      var sheet = 'DonorWall';
+    }
 
     var url = 'https://docs.google.com/spreadsheets/u/0/d/'
-    + file_id + '/gviz/tq?sheet=' + sheet + '&tqx=out:json&tq=' + escape('SELECT A, B, C, D, E ORDER BY A DESC');
+    + file_id + '/gviz/tq?sheet=' + sheet + '&tqx=out:json&headers=1&tq=' + escape('SELECT A, B, C, D, E ORDER BY A DESC');
 
     var spreadSheetLink = 'https://docs.google.com/spreadsheets/d/' + file_id + '/edit';
 
