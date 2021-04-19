@@ -1,3 +1,27 @@
+/* files included 
+
+common.css
+gallery.css
+iconbar.css
+flipbox3.css
+hours.css
+faqs2.css
+teamboxes2.css
+filter.css
+donor.css
+
+common.js
+gallery.js
+iconbar.js
+flipbox3.js
+hours.js
+faqs2.js
+teamboxes2.js
+filter.js
+donor.js
+
+*/ 
+
 /* ----------------------------------------------------------- */
 /* Process the ajax request to get spreadsheet data            */
 /*    04/10/2021 - initial                                     */
@@ -110,12 +134,12 @@ function showIconBar(sticky = true, iconID = 'iconBar') {
   temp += '</ul>\n';
   $('#' + iconID).html(temp); 
   if (sticky) {
-    var s = $('section:first-of-type div.content-wrapper div.content');
+    var s = $('article:first-of-type section:first-of-type div.content-wrapper div.content');
     var h = s.height();
     h = parseInt(h) + 100; 
     s.height(h + 'px'); 
     $('#' + iconID).addClass('sticky');
-    $('#' + iconID).appendTo('#page section:first-of-type div.section-background');
+    $('#' + iconID).appendTo('#page article:first-of-type section:first-of-type div.section-background');
         $('div.mySlides div.slideCaption').css('bottom','100px');
   } 
 }
