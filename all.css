@@ -52,9 +52,6 @@ section:first-of-type div.content-wrapper div.content.highligh h3 {
     padding: 10px;
 }
 
-section:first-of-type div.content-wrapper div.content.hi {
-	width
-}
 
 /* ----------------------------------------------------------- */
 /* Highlight Source Code                                       */
@@ -186,7 +183,7 @@ h2.item-pagination-title {
 /*    04/1/72021 - initial                                     */
 /* ----------------------------------------------------------- */
 
-section:first-of-type div.content-wrapper div.content {
+article:first-of-type section:first-of-type div.content-wrapper div.content {
     width: auto !important;
     /*min-height: 300px;*/
 }
