@@ -191,7 +191,8 @@ section:first-of-type div.content-wrapper div.content {
     /*min-height: 300px;*/
 }
 
-#iconBar { 
+#iconBar,
+#iconBarFoot { 
   background: #eee;
   position: relative;
   height: 100px;
@@ -199,7 +200,8 @@ section:first-of-type div.content-wrapper div.content {
   clear: both;
 }
 
-#iconBar.sticky {
+#iconBar.sticky,
+#iconBarFoot.sticky  {
   background: #eee;
   position: absolute;
   bottom: 0;
@@ -208,7 +210,8 @@ section:first-of-type div.content-wrapper div.content {
   clear: both;
 }
 
-#iconBar .iconBarFlex {
+#iconBar .iconBarFlex,
+#iconBarFoot .iconBarFlex {
   /* We first create a flex layout context */
   display: flex;
   flex-flow: wrap;
@@ -218,31 +221,36 @@ section:first-of-type div.content-wrapper div.content {
   justify-content: space-around;
 }
 
-#iconBar .iconBarFlex .flex-item {
+#iconBar .iconBarFlex .flex-item,
+#iconBarFoot .iconBarFlex .flex-item {
   padding: 5px;
   height: auto;
   line-height: 1em;
   font-size: 1em;
 }
 
-#iconBar .iconBarFlex .flex-item img {
+#iconBar .iconBarFlex .flex-item img,
+#iconBarFoot .iconBarFlex .flex-item img {
   width: 150px;
   object-fit:cover;
 }
 
-#iconBar img#banner{
+#iconBar img#banner,
+#iconBarFoot img#banner{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 @media (max-width: 800px) {
-  #iconBar .iconBarFlex .flex-item img {
+  #iconBar .iconBarFlex .flex-item img,
+  #iconBarFoot .iconBarFlex .flex-item img {
       width: auto;
       height: 35px;
   }
 
-  #iconBar .iconBarFlex .flex-item {
+  #iconBar .iconBarFlex .flex-item,
+  #iconBarFoot .iconBarFlex .flex-item {
     padding: unset;
     height: auto;
     line-height: unset;
