@@ -272,7 +272,7 @@ article:first-of-type section:first-of-type div.content-wrapper div.content {
     text-align: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 20px;
+    /*row-gap: 20px;*/
 }
 
 #flexbox.v3 div.flex-container div.newcolumn:only-child {
@@ -461,6 +461,7 @@ article:first-of-type section:first-of-type div.content-wrapper div.content {
 
     #flexbox.v3 div.flex-container div.newcolumn { 
         width: 100%;
+        margin-bottom: 20px;
     }  
     
 }
