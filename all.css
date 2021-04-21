@@ -491,7 +491,6 @@ article:first-of-type section:first-of-type div.content-wrapper div.content {
   border: 2px solid rgba(233, 34, 49,.5);
   flex: 1 1 0;
   width: auto;
-  overflow: hidden;
 }
 
 #hoursContainer.museumAahom {
