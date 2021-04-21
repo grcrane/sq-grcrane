@@ -1,0 +1,303 @@
+-- from aahom advanced code injection 4/19/21
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-aahom@a037dfd/style.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-aahom@7e6fc5f/unity.min.js"></script>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@7f1b4f3/faqs.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@4785926/faqs.css" />
+
+--- from home page advanced 4/19/21
+
+<style type="text/css">
+
+div.sqs-gallery-design-carousel .sqs-gallery-controls .previous::before {
+  content: "\E002";
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+div.sqs-gallery-design-carousel .sqs-gallery-controls .next::before {
+  content: "\E005";
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+div.sqs-block-summary-v2 .summary-block-setting-design-carousel .summary-carousel-pager {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+div.sqs-gallery-design-carousel .sqs-gallery-controls .next, div.sqs-gallery-design-carousel .sqs-gallery-controls .previous {
+    float: unset;
+  display: inline-block;
+}
+  
+div.sqs-block-summary-v2 .summary-block-setting-design-carousel .summary-heading {
+    display: block;
+    float: unset;
+    width: 100%;
+    text-align: center;
+}
+
+div.sqs-gallery-design-carousel span.summary-header-text {
+    display: none;
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+}
+
+section:first-of-type div.content-wrapper div.content h3 {
+    text-align: center;
+    white-space: pre-wrap;
+    background: #eee;
+    opacity: ;
+    background-color: rgba(256,256,256,.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+section:first-of-type div.content-wrapper div.content {
+  /*width: auto !important;*/
+  min-height: 300px;
+}
+
+div.section-background div.mySlides div.slideCaption {
+    bottom: 100px;
+}
+#imgcontainerTest { 
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+}
+xsection:nth-child(3).page-section.content-width--medium:not(.content-collection) .content {
+  width: 100%;
+  }
+.flex-containerTest {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  align-content: baseline;
+  /*justify-content: center;*/
+
+  
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-containerTest .flex-item {
+  padding: 5px;
+  height: auto;
+  line-height: 1em;
+  font-size: 1em;
+}
+.flex-containerTest .flex-item img {
+  width: 150px;
+  object-fit:cover;
+}
+#imgcontainer 
+ 
+}
+#imgcontainerTest img#banner{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  #imgcontainerTest .flex-containerTest .flex-item img {
+      width: auto;
+      height: 35px;
+  }
+
+  #imgcontainerTest .flex-containerTest .flex-item {
+    padding: unset;
+    height: auto;
+    line-height: unset;
+    font-size: 1em;
+  }
+}
+
+</style>
+<script>
+$( document ).ready(function() {
+    doGalleryShow();
+   $('#imgcontainerTest').appendTo($('#page section:first-of-type div.section-background'));
+})
+</script>
+
+-- From home page show icon bar
+
+<div id=imgcontainerTest style="clear:both";>
+<ul class="flex-containerTest">
+  <li class="flex-item"><img src="https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f4857363da23de8d99653/1616857176038/aahom.png?format=2500w"></li>
+  <li class="flex-item"><img src="https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f48565689961a0425d469/1616857174314/lsnc.png"></li>
+  <li class="flex-item"><img src="https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f48578926120327029e3f/1616857176069/uil.png"></li>
+  <li class="flex-item"><img src="https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f485760b0890b8760c9d1/1616857176070/yam.png"></li>
+</ul>
+</div>
+
+----- From home page flip boxes
+
+<style> 
+#flexbox.v2 div.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+#flexbox.v2 .backContent {
+    font-size: 15px;
+    -webkit-line-clamp: 5;
+}
+#flexbox.v2 div.centerBack .labelText {
+   left: unset;
+   top: unset;
+   transform: unset;
+ }
+#flexbox.v2 div.flex-container div.newcolumn {
+    width: 250px;
+  	position: relative;
+}
+#flexbox.v2 div.flex-container div.newcolumn .flip-card {
+    width: 100%;
+    height: 250px;
+}
+#flexbox.v2 div.centerBack .labelText {
+    display: none;
+}
+#flexbox.v2 .dividerBack {
+    display: none;
+}
+#flexbox.v2 .backContent {
+    padding: 0 5px;
+}
+#flexbox.v2 .backContent {
+    -webkit-line-clamp: 7;
+}
+#flexbox.v2 div.flex-container div.newcolumn {
+    /*margin: 5px auto;*/
+}
+  
+  #flexbox.v2 {
+    width: 100%;
+    margin: 0 auto;
+}
+#flexbox.v2 div.flex-container .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+#flexbox.v2 div.flex-container .flip-card {
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    overflow: hidden;
+}
+  
+  
+@media (max-width:414px) {
+	#flexbox.v2 div.flex-container div.newcolumn {
+    	width: 100%;
+ 	}
+}
+</style>
+<script>
+$( document ).ready(function() {
+  var file_id = '1wEfSb4Dnjz-eNEayaNiiws3ta1ZEueiQyG5-BTWSXag';
+  build_flipcards(file_id); // build the html
+  $('.newcolumn .flip-card-front img:first-child')
+    .addClass("active");
+  setTimeout(flip_carousel, 5000);
+});
+</script>
+<div id=flexbox class="v2">
+  <div class="flex-container sampleClass">
+  </div>
+</div>
+
+--- From footer
+
+<style type="text/css">
+#imgcontainerFooter {
+    background: #eee;
+}
+.flex-containerFooter {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  /*justify-content: space-around;*/
+  align-content: baseline;
+  justify-content: center;
+  
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+
+#imgcontainerFooter .flex-item {
+  padding: 5px;
+  height: auto;
+  line-height: 1em;
+  font-size: 1em;
+}
+#imgcontainerFooter .flex-item img {
+  width: 150px;
+  object-fit:cover;
+}
+#imgcontainer 
+ 
+}
+#imgcontainerFooter img#banner{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer div.content {
+  width: 100%;
+  }
+</style>
+<div id=imgcontainerFooter>
+<ul class="flex-containerFooter">
+  <li class="flex-item"><img src="https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f4857363da23de8d99653/1616857176038/aahom.png?format=2500w"></li>
+  <li class="flex-item"><img src="https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f48565689961a0425d469/1616857174314/lsnc.png"></li>
+  <li class="flex-item"><img src="https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f48578926120327029e3f/1616857176069/uil.png"></li>
+  <li class="flex-item"><img src="https://static1.squarespace.com/static/5f73ca8db43a982332ef42a7/60316dbd7dd52d12ad920e7f/605f485760b0890b8760c9d1/1616857176070/yam.png"></li>
+</ul>
+</div>
