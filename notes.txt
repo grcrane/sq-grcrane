@@ -226,6 +226,15 @@ $( document ).ready(function() {
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@a0d49e4/common.min.css" />
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@31900ba/common.js"></script>
 
+---------------------- All scripts and styles
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@a4cf66a/all.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@8eb0f8c/all.js"></script>
+
+
 ----------------------- Gallery slideshow
 
 -- Gallery
@@ -312,4 +321,94 @@ $( document ).ready(function() {
 });
 </script>
 <div class="team_container"></div>
+
+----------------------- Featured Box (featurebox)
+
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@01b6447/featurebox.min.css" />
+
+<div class="level1-container">
+  <div class="flex-item">
+    <div class=title>Families & Individuals</div>
+    <div class=picture>
+      <img src="https://images.squarespace-cdn.com/content/5f73ca8db43a982332ef42a7/38511cff-89f4-419e-bf98-4a765dab40e5/summer-camp.jpg?content-type=image%2Fjpeg">
+    </div>
+    <div class=message>
+      <strong>Looking for activities, including</strong> 
+      <ul>
+        <li>Museum visits
+        <li>Birthday parties
+        <li>Scout programs
+      </ul>
+      
+    </div>
+    <div class=goto>
+      <div><a href="#">Read More</a></div>
+    </div>
+
+  </div>
+  <div class="flex-item">
+    <div class=title>Educators & Community Groups</div>
+    <div class=picture>
+      <img src="https://images.squarespace-cdn.com/content/5f73ca8db43a982332ef42a7/1610805802598-SG2YRMWZJ85ATSRJFFMV/rudolf_steiner_banner.jpg?format=1500w&content-type=image%2Fjpeg">
+    </div>
+    <div class=message>
+      <strong>Looking for activities involving</strong>
+      <ul>
+        <li>School groups
+        <li>Senior Centers
+        <li>Community Centers
+        <li>Etc.
+      </ul>
+      
+    </div>
+    <div class=goto>
+      <div><a href="#">Read More</a></div>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+---------------------------------- Donor Wall
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@9761a2a/donor.min.js"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/gh/grcrane/sq-grcrane@c63115c/donor.min.css" />
+<script>
+$( document ).ready(function() {
+    do_donor_wall_new();
+});
+</script>
+<h2>Donor Wall</h2>
+<div  class="summary-excerpt" id="donorWall"></div>
+
+----------------------------- Final ---------------------
+
+------ Gallery Slideshow
+
+<script>
+$( document ).ready(function() {
+    doGalleryShow();
+})
+</script>
+
+------ Iconbar 
+
+<script>
+$( document ).ready(function() {
+   showIconBar(true);
+})
+</script>
+<div id=iconBar></div>
+
+------ Flip card boxes
+
+<script>
+$( document ).ready(function() {
+  build_flipcards3(); 
+});
+</script>
+<div id=flexbox class="v3">
+  <div class="flex-container">
+  </div>
+</div>
 
