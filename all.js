@@ -617,12 +617,13 @@ function do_donor_wall_new(file_id = null, sheet = null) {
       var sheet = 'DonorWall';
     }
 
-    var url = 'https://docs.google.com/spreadsheets/u/0/d/'
-    + file_id + '/gviz/tq?sheet=' + sheet + '&tqx=out:json&headers=1&tq=' + escape('SELECT A, B, C, D, E ORDER BY A DESC');
-
     var spreadSheetLink = 'https://docs.google.com/spreadsheets/d/' + file_id + '/edit';
 
+    var url = 'https://docs.google.com/spreadsheets/u/0/d/'
+    + file_id + '/gviz/tq?sheet=' + sheet + '&tqx=out:json&headers=1&tq=' 
+    + escape('SELECT A, B, C, D, E ORDER BY A DESC');
     var donorlist = get_spreadsheet(url);
+    
     console.log(donorlist);
     if(donorlist.length == 0) {
         $('#donorWall').append('<br>Ooops.. unable to read spreadsheet</br>');
